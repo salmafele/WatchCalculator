@@ -15,6 +15,7 @@
 		3855D47B23B55219004B40BA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855D47A23B55219004B40BA /* ExtensionDelegate.swift */; };
 		3855D47D23B55219004B40BA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855D47C23B55219004B40BA /* NotificationController.swift */; };
 		3855D47F23B5521C004B40BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3855D47E23B5521C004B40BA /* Assets.xcassets */; };
+		3855D49023B58976004B40BA /* TipInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855D48F23B58976004B40BA /* TipInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		3855D47E23B5521C004B40BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3855D48023B5521C004B40BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3855D48123B5521C004B40BA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3855D48F23B58976004B40BA /* TipInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3855D47823B55219004B40BA /* InterfaceController.swift */,
+				3855D48F23B58976004B40BA /* TipInterfaceController.swift */,
 				3855D47A23B55219004B40BA /* ExtensionDelegate.swift */,
 				3855D47C23B55219004B40BA /* NotificationController.swift */,
 				3855D47E23B5521C004B40BA /* Assets.xcassets */,
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3855D47D23B55219004B40BA /* NotificationController.swift in Sources */,
+				3855D49023B58976004B40BA /* TipInterfaceController.swift in Sources */,
 				3855D47B23B55219004B40BA /* ExtensionDelegate.swift in Sources */,
 				3855D47923B55219004B40BA /* InterfaceController.swift in Sources */,
 			);

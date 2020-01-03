@@ -1,49 +1,37 @@
 //
-//  InterfaceController.swift
+//  TipInterfaceController.swift
 //  WatchCalculator WatchKit Extension
 //
 //  Created by Salma on 12/26/19.
 //  Copyright © 2019 Salma. All rights reserved.
 //
-
 import WatchKit
 import Foundation
 
+class TipInterfaceController: WKInterfaceController {
 
-class InterfaceController: WKInterfaceController {
-
-    @IBAction func tipCalculator() {
-        pushController(withName: "tip", context: .none)
-    }
-    
     var value = 0
     var calculateBool: Bool = false
     var lastValue = 0
     var oper: String = ""
-    
-    @IBOutlet weak var calculatorLabel: WKInterfaceLabel!
 
+     @IBOutlet weak var billAmount: WKInterfaceLabel!
+    
     @IBAction func ac() {
         
         lastValue = 0
         value = 0
-        calculatorLabel.setText("\(value)")
+        billAmount.setText("\(value)")
         calculateBool = false
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
     }
-    
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-    
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
@@ -77,45 +65,43 @@ class InterfaceController: WKInterfaceController {
     @IBAction func zero() {
         addToNumber(num: 0)
     }
-    // Not functional for now
-//    @IBAction func point() {
-//    }
-    @IBAction func add() {
-        operatorPressed(op: "Add")
+
+    @IBAction func ten() {
+        operatorPressed(op: "10%")
+        billAmount.setText("\(0.01 * 100)")
     }
-    @IBAction func sub() {
-        operatorPressed(op: "Sub")
+    @IBAction func fifteen() {
+        operatorPressed(op: "15%")
+        billAmount.setText("\(0.015 * 100)")
     }
-    @IBAction func multiply() {
-        operatorPressed(op: "Multiply")
+    @IBAction func twinty() {
+        operatorPressed(op: "20%")
+        billAmount.setText("\(0.020 * 100)")
     }
-    @IBAction func divide() {
-        operatorPressed(op: "Divide")
-    }
-    @IBAction func equal() {
+
+    // tip percentage
+    @IBAction func calculate() {
         if (calculateBool) {
             
-            var tempRes = 0
+            var tempRes = ""
             
-            if (oper == "Add") {
-                tempRes = lastValue + value
+            if (oper == "10%") {
+                tempRes = "$ " + "\(lastValue + value)" + "\(ten())"
 
-            } else if (oper == "Sub") {
-                tempRes = lastValue - value
+            } else if (oper == "15%") {
+                tempRes = "$ " + "\(lastValue + value)" + "\(fifteen())"
 
-            } else if (oper == "Multiply") {
-                tempRes = lastValue * value
+            } else if (oper == "20%") {
+                tempRes = "$ " + "\(lastValue + value)" + "\(twinty())"
 
-            } else if (oper == "Divide") {
-                tempRes = lastValue / value
-                
             } else { // error
             }
-            calculatorLabel.setText("\(tempRes)")
+            
+            billAmount.setText("\(tempRes)")
             calculateBool = false
             
         } else {
-            calculatorLabel.setText("\(value)")
+            billAmount.setText("\(value)")
         }
     }
     
@@ -124,24 +110,24 @@ class InterfaceController: WKInterfaceController {
         if (calculateBool) {
                 
             if (value == 0) {
-                calculatorLabel.setText("\(num)")
+                billAmount.setText("\(num)")
                 value = num
                 
             } else {
                 let temp: String = String(value) + String(num)
                 value = Int(temp)!
-                calculatorLabel.setText(temp)
+                billAmount.setText(temp)
                 }
             
         } else {
             if (value == 0) {
-                calculatorLabel.setText("\(num)")
+                billAmount.setText("\(num)")
                 value = num
                 
             } else {
                 let temp: String = String(value) + String(num)
                 value = Int(temp)!
-                calculatorLabel.setText(temp)
+                billAmount.setText(temp)
                 }
         }
     }
@@ -151,20 +137,21 @@ class InterfaceController: WKInterfaceController {
             lastValue = value
             value = 0
             
-            if (op == "Add") {
-                oper = "Add"
-                calculatorLabel.setText("+")
-            } else if (op == "Sub") {
-                oper = "Sub"
-                calculatorLabel.setText("-")
-            } else if (op == "Multiply") {
-                oper = "Multiply"
-                calculatorLabel.setText("*")
-            } else if (op == "Divide") {
-                oper = "Divide"
-                calculatorLabel.setText("/")
+            if (op == "ten") {
+                oper = "ten"
+                billAmount.setText("10%")
+                
+            } else if (op == "fifteen") {
+                oper = "fifteen"
+                billAmount.setText("15%")
+
+            } else if (op == "twinty") {
+                oper = "twinty"
+                billAmount.setText("20%")
+
             } else { // error
             }
+            
             calculateBool = true
         }
     }

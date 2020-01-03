@@ -11,7 +11,7 @@
             <objects>
                 <controller identifier="calculator" id="W3B-Yq-Rbw" customClass="InterfaceController" customModule="WatchCalculator_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="cKU-sR-yXW">
+                        <group width="1" height="21" alignment="left" id="cKU-sR-yXW">
                             <items>
                                 <button width="30" height="31" alignment="left" title="AC" id="9cd-oa-4g0" userLabel="Clear All Button">
                                     <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -20,10 +20,10 @@
                                         <action selector="ac" destination="W3B-Yq-Rbw" id="Xx4-qh-SdN"/>
                                     </connections>
                                 </button>
-                                <label width="136" height="32" alignment="left" text="0" textAlignment="right" id="Okl-MH-odC"/>
+                                <label width="136" height="32" alignment="left" text="0" textAlignment="center" id="Okl-MH-odC"/>
                             </items>
                         </group>
-                        <group width="1" height="120" alignment="center" layout="vertical" spacing="3" id="qYs-lQ-mmb">
+                        <group width="1" height="118" alignment="center" layout="vertical" spacing="3" id="qYs-lQ-mmb">
                             <items>
                                 <group width="1" height="25" alignment="center" verticalAlignment="center" id="tag-Ss-2rf">
                                     <items>
@@ -149,6 +149,13 @@
                             </items>
                             <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
                         </group>
+                        <button width="1" height="21" alignment="left" title="Tip Calculator" id="gZs-kt-lYb">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="tipCalculator" destination="W3B-Yq-Rbw" id="plh-IW-cCZ"/>
+                            </connections>
+                        </button>
                     </items>
                     <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
                     <connections>
@@ -157,6 +164,150 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="308.95652173913044" y="-233.75"/>
+        </scene>
+        <!--tip-->
+        <scene sceneID="gyj-hf-yXJ">
+            <objects>
+                <controller identifier="tip" id="1xR-d7-7UA" customClass="TipInterfaceController" customModule="WatchCalculator_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="33" alignment="left" id="8dh-F8-Um0">
+                            <items>
+                                <button width="30" height="31" alignment="left" title="AC" id="FNH-uU-dYd" userLabel="Clear All Button">
+                                    <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="ac" destination="1xR-d7-7UA" id="sdb-0V-TTv"/>
+                                    </connections>
+                                </button>
+                                <label width="136" height="32" alignment="left" text="0" textAlignment="center" id="Ocm-pj-CU7"/>
+                            </items>
+                        </group>
+                        <group width="1" height="124" alignment="center" layout="vertical" spacing="3" id="KxW-ff-1fV">
+                            <items>
+                                <group width="1" height="25" alignment="center" verticalAlignment="center" id="NyN-C5-2va">
+                                    <items>
+                                        <button width="35" height="24" alignment="left" title="1" id="ThU-z3-CgW" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="one" destination="1xR-d7-7UA" id="Ud0-1M-OVU"/>
+                                            </connections>
+                                        </button>
+                                        <button width="35" height="1" alignment="left" title="2" id="hQa-2q-2Rt" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="two" destination="1xR-d7-7UA" id="cB4-Jk-1in"/>
+                                            </connections>
+                                        </button>
+                                        <button width="35" height="1" alignment="left" title="3" id="vki-Iy-6qw" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="three" destination="1xR-d7-7UA" id="dZD-Ns-GuJ"/>
+                                            </connections>
+                                        </button>
+                                        <button width="52" height="1" alignment="left" title="10%" id="TMI-hG-Ozr" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="ten" destination="1xR-d7-7UA" id="zEr-e3-ODB"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="25" alignment="center" verticalAlignment="center" id="cm8-Qa-XED">
+                                    <items>
+                                        <button width="35" height="1" alignment="left" title="4" id="EIt-bE-jnm" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="four" destination="1xR-d7-7UA" id="6fd-UA-5ty"/>
+                                            </connections>
+                                        </button>
+                                        <button width="35" height="1" alignment="left" title="5" id="hYY-xq-dFb" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="five" destination="1xR-d7-7UA" id="6dZ-FV-0mF"/>
+                                            </connections>
+                                        </button>
+                                        <button width="35" height="1" alignment="left" title="6" id="Rgg-HS-i4c" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="six" destination="1xR-d7-7UA" id="nJP-sy-qqq"/>
+                                            </connections>
+                                        </button>
+                                        <button width="52" height="1" alignment="left" title="15%" id="ci9-L2-v4N" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="fifteen" destination="1xR-d7-7UA" id="zIC-Vv-k3v"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="25" alignment="center" verticalAlignment="center" id="w9l-5y-Ol3">
+                                    <items>
+                                        <button width="35" height="1" alignment="left" title="7" id="5hB-EH-cwc" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="seven" destination="1xR-d7-7UA" id="jEL-8z-x98"/>
+                                            </connections>
+                                        </button>
+                                        <button width="35" height="1" alignment="left" title="8" id="GSM-81-yNe" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="eight" destination="1xR-d7-7UA" id="SZe-Ff-f2Y"/>
+                                            </connections>
+                                        </button>
+                                        <button width="35" height="1" alignment="left" title="9" id="B7q-6J-GiC" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="nine" destination="1xR-d7-7UA" id="MYB-bC-4SJ"/>
+                                            </connections>
+                                        </button>
+                                        <button width="53" height="1" alignment="left" title="20%" id="tzx-du-Iog" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="twinty" destination="1xR-d7-7UA" id="oVX-bK-Pn2"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="25" alignment="center" verticalAlignment="center" id="9dJ-ax-i8v">
+                                    <items>
+                                        <button width="35" height="1" alignment="left" title="0" id="8M3-Jf-MyR" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="zero" destination="1xR-d7-7UA" id="CjS-iy-zdB"/>
+                                            </connections>
+                                        </button>
+                                        <button width="126" height="25" alignment="left" title="Calculate" id="jdT-Rh-kZi" userLabel="Clear All Button">
+                                            <color key="backgroundColor" red="0.62095678629999995" green="0.84402669490000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="12"/>
+                                            <connections>
+                                                <action selector="calculate" destination="1xR-d7-7UA" id="tgp-Yj-HdW"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="billAmount" destination="Ocm-pj-CU7" id="HLF-6k-bec"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="530.695652173913" y="-234.50892857142858"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
